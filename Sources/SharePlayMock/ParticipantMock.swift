@@ -43,6 +43,7 @@ public class ParticipantMock : Hashable, Identifiable {
     }
 }
 
+@available(iOS 15, macOS 12, tvOS 15, macCatalyst 15, *)
 extension ParticipantMock {
     static func toRaw(_ participants: Participants) -> GroupActivities.Participants {
         switch participants {
@@ -57,6 +58,7 @@ extension ParticipantMock {
     }
 }
 
+@available(iOS 15, macOS 12, tvOS 15, macCatalyst 15, *)
 public enum Participants {
 
     case all

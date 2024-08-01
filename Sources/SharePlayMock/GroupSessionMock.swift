@@ -31,6 +31,7 @@ final public class GroupSessionMock<M: GroupActivityMock> : ObservableObject {
     @Published final public internal(set) var activeParticipants: Set<ParticipantMock>
     private var activeParticipantsCancellable: AnyCancellable?
     
+#if os(visionos)
     final public var systemCoordinator: SystemCoordinator? {
         get async {
             if let mock = SharePlayMockManager.useMock() {
@@ -41,6 +42,7 @@ final public class GroupSessionMock<M: GroupActivityMock> : ObservableObject {
             }
         }
     }
+    #endif
     
     final public var localParticipant: ParticipantMock {
         get {
